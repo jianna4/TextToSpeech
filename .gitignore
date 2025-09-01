@@ -1,0 +1,16 @@
+# Python
+*.pyc
+__pycache__/
+venv/
+
+# Node.js
+node_modules/
+dist/
+
+# Databases
+*.sqlite3
+*.db
+
+# Environment files
+.env
+.env.local
