@@ -8,14 +8,18 @@ reader= PdfReader(PDF_PATH)
 number_of_pages = len(reader.pages)
 print(f"Number of pages: {number_of_pages}")
 
-for page in reader.pages:
-    text = page.extract_text()
-    print(text)
-    tts = gTTS(text=text, lang='en')
-    tts.save("page.mp3")
+pygame.mixer.init()
+for i, page in enumerate(reader.pages, start=1):
 
-    pygame.mixer.init()
-    pygame.mixer.music.load("page.mp3")
+    text = page.extract_text()
+    print(f"\n--- Reading page {i} ---")
+
+    file_name=f"page_{i}.mp3"
+    tts = gTTS(text=text, lang='en')
+    tts.save(file_name)
+
+   
+    pygame.mixer.music.load(file_name)
     pygame.mixer.music.play()
     while pygame.mixer.music.get_busy():  # wait for music to finish playing
         continue
