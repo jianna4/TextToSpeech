@@ -15,11 +15,15 @@ for i, page in enumerate(reader.pages, start=1):
     print(f"\n--- Reading page {i} ---")
 
     file_name=f"page_{i}.mp3"
+    print(f"converting text{file_name}...")
     tts = gTTS(text=text, lang='en')
+    
     tts.save(file_name)
-
+    print(f"Saved {file_name}")
    
     pygame.mixer.music.load(file_name)
+    print(f"loading {file_name}...")
     pygame.mixer.music.play()
+    print(f"\n--- Reading page {i} ---")
     while pygame.mixer.music.get_busy():  # wait for music to finish playing
         continue
