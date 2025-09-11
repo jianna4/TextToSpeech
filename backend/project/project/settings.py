@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'app',
     'rest_framework',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -129,6 +130,32 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# backend/settings.py
+
 import os
+
+# 📁 Media files (uploaded PDFs)
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
+
+# 📁 Audio files (generated TTS)
+AUDIO_URL = '/audio/'
+AUDIO_ROOT = os.path.join(BASE_DIR, '../audio')
+
+# 📁 Static files (CSS, JS — will be used later by React)
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, '../static')
+
+# backend/settings.py
+
+# 🔌 Channels Configuration (for WebSockets)
+ASGI_APPLICATION = 'backend.asgi.application'
+
+# 🧱 Channel Layer: where WebSocket messages are routed
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+        # Good for development
+        # Use Redis in production: 'channels_redis.core.RedisChannelLayer'
+    }
+}
