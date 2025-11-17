@@ -50,3 +50,15 @@ Frontend Setup (React)
 cd frontend
 npm install
 npm start
+
+Usage
+
+Open the frontend in your browser (usually at http://localhost:3000).
+
+Navigate to a page with text content.
+
+Click the Read Text button to start converting the text into speech.
+
+The application will read the text page by page.
+
+Optionally, click Start from Here at any part of the text to begin reading from that section.
