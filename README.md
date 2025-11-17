@@ -62,3 +62,13 @@ Click the Read Text button to start converting the text into speech.
 The application will read the text page by page.
 
 Optionally, click Start from Here at any part of the text to begin reading from that section.
+
+Project Structure
+├── backend/          # Django backend
+│   ├── tts_app/      # Django app for Text-to-Speech
+│   ├── manage.py
+│   └── requirements.txt
+├── frontend/         # React frontend
+│   ├── src/
+│   └── package.json
+└── README.md
