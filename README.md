@@ -15,3 +15,13 @@ Users can click a button to start speech from a specific part of the text.
 Interactive and user-friendly interface with React.
 
 Seamless backend integration with Django.
+
+Tech Stack
+
+Backend: Django
+
+Frontend: React
+
+Text-to-Speech: gTTS (Google Text-to-Speech)
+
+Audio Playback: Browser-based audio player
