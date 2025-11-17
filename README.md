@@ -82,3 +82,14 @@ The backend uses gTTS to generate a speech file (MP3).
 The frontend receives the audio file and plays it using a browser audio player.
 
 Users can navigate pages, and the system continues reading the next page automatically or from a chosen point.
+
+Dependencies
+
+Django
+
+
+gTTS
+
+React
+
+Node.js / npm
