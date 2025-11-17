@@ -93,3 +93,13 @@ gTTS
 React
 
 Node.js / npm
+
+Future Improvements
+
+Add support for multiple languages.
+
+Pause, resume, and skip functionalities for audio playback.
+
+Highlight text as it is being read.
+
+Save audio files for offline playback.
