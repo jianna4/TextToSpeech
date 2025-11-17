@@ -25,3 +25,28 @@ Frontend: React
 Text-to-Speech: gTTS (Google Text-to-Speech)
 
 Audio Playback: Browser-based audio player
+
+Installation
+
+Clone the repository
+
+git clone <your-repo-url>
+cd <your-repo-folder>
+
+
+Backend Setup (Django)
+
+cd backend
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+
+
+Frontend Setup (React)
+
+cd frontend
+npm install
+npm start
